@@ -29,7 +29,7 @@ platformBrowserDynamic().bootstrapModule(AppModule);
 * Component控制屏幕上的某一块view区域，Component类通过其属性和方法来与view进行交互。
 * Component也是由一个普通的类与decorator `@Component`组成的，其中一些常见的metadata属性有：
   * `selector`：在父模板中的CSS选择器。
-  * `templateUrl`或`template`：模板URL或模板自身
+  * `templateUrl`或`template`：模板URL或行内模板
   * `providers`：一个数组，实现依赖注入的关键，声明本component需要用到的service
 
 ### 数据绑定

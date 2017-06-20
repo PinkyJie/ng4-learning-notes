@@ -1,5 +1,8 @@
 # ng4-learning-notes
 
-### GUIDE
+### FUNDAMENTALS
 
-4. [Architecture](./Architecture.md)
+* [Architecture](./1-architecture.md)
+* Template & Data Binding
+  * [Displaying Data](./2-1-displaying-data.md)
+  * [Template Syntax](./2-2-template-syntax.md)
