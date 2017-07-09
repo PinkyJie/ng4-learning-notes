@@ -10,7 +10,7 @@ The Root Module
 
 ### declarations
 
-* 每个component必须声明在某个module的declarations中。
+* 每个组件必须声明在某个module的declarations中。
 * 只有3种类型的类可以出现在declarations数组中：component、directive、pipe。
 
 ### bootstrap
