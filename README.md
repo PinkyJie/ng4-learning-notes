@@ -10,3 +10,7 @@
   * [Component Interaction](./2-4-component-interaction.md)
   * [Component Styles](./2-5-component-styles.md)
   * [Dynamic Component Loader](./2-6-dynamic-component-loader.md)
+  * [Attribute Directives](./2-7-attribute-directives.md)
+  * [Structural Directives](./2-8-structural-directives.md)
+  * [Pipes](./2-9-pipes.md)
+  * [Animations](./2-10-animations.md)
