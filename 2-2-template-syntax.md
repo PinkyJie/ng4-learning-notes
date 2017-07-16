@@ -106,7 +106,7 @@ delete() {
 * 左边通常都包裹在`[] () [()]`，右边通常是`"" {{}}`。
 * directive的属性或方法都可以直接当做target，但要成为source必须定义为inputs和outputs。
 
-### `@input`和`@output`
+### `@Input`和`@Output`
 
 * 定义：
 ``` typescript
