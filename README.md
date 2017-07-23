@@ -14,3 +14,10 @@
   * [Structural Directives](./2-8-structural-directives.md)
   * [Pipes](./2-9-pipes.md)
   * [Animations](./2-10-animations.md)
+* Forms
+  * [User Input](./3-1-user-input.md)
+  * [Template-driven Forms](./3-2-template-driven-forms.md)
+  * [Form Validation](./3-3-form-validation.md)
+  * [Reactive Forms](./3-4-reactive-forms.md)
+  * [Dynamic Forms](./3-5-dynamic-forms.md)
+* [Bootstrapping](./4-bootstrapping.md)

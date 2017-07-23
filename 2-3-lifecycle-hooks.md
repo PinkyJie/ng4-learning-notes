@@ -31,7 +31,7 @@ Lifecycle Hooks
 * `ngAfterViewChecked()`：
   * 第一次调用紧随`ngAfterViewInit()`，后面每次`ngAfterContentChecked()`之后调用。
   * 如若子view的property改变触发了此次调用，那么拿到的子view的property值是改变前的。
-  * 在此回调中不能改变view中property的值，因为此时的生命周期初期已经checked的时期了，angular的undirectional data flow不允许在此回调立即改变一就那个checked的值。如果需要改变，必须使用setTimeout，否则angular会报错。
+  * 在此回调中不能改变view中property的值，因为此时的生命周期初期已经checked的时期了，angular的undirectional data flow不允许在此回调立即改变已经checked的值。如果需要改变，必须使用setTimeout，否则angular会报错。
   * component特有。
 * `ngOnDestroy()`：
   * angular销毁组件时调用。

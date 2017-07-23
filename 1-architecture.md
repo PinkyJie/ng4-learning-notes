@@ -39,7 +39,7 @@ platformBrowserDynamic().bootstrapModule(AppModule);
   * `[property] = "value"`：属性绑定，把父类组件的value的值传入子类组件的property属性中去。
   * `(click) = "handler"`：事件绑定，点击时间发生时调用组件的handler方法。
   * `[(ng-model)] = "property"`：双向绑定。
-* Angular在每次Javascript事件循环中处理一次所有的数据绑定，从根组件开始到左右的字组件。
+* Angular在每次Javascript事件循环中处理一次所有的数据绑定，从根组件开始到左右的子组件。
 
 ### Directives
 

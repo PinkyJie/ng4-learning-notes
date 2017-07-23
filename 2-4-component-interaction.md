@@ -18,7 +18,10 @@ Component Interaction
 * 子组件向父组件传递事件。
   * 通过`@Output` property。
   * `@Output` property本身是一个`EventEmitter`，子组件在自身的方法中调用`EventEmitter.emit(data)`，而父组件可以通过`@Output`右边的绑定中使用`$event`变量来访问传出的数据。
-* 父组件通过template reference variable直接访问字组件的property和方法。
+* 父组件通过template reference variable直接访问子组件的property和方法。
   * 只适用于在父组件模板中使用。
-* 父组件使用`@ViewChild`来访问字组件的property和方法。
-* 父子组件通过一个service来共享数据，service可以声明在父组件的`providers`中，只有父组件和字组件对此service可见。
+* 父组件使用`@ViewChild`来访问子组件的property和方法：
+  ``` typescript
+    @ViewChild(CountdownTimerComponent) private timerComponent: CountdownTimerComponent;
+  ```
+* 父子组件通过一个service来共享数据，service可以声明在父组件的`providers`中，只有父组件和子组件对此service可见。
