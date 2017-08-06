@@ -50,14 +50,14 @@ Form Validation
 
 * angular里的两种form：Template Driven Form - `FormsModule`，Reactive Form - `ReactiveFormsModule`。
 * 区别：
-  * Template Driven Form，已模板为主，模板中定义好各个表单元素，校验规则，然后angular在运行时解析模板，绑定`NgForm`以及相应的control model。
-  * Reactive Form，以代码为主，代码中定义好表单的各个control model，然后angular运行时将代码中的model与模板进行绑定。
+  * Template Driven Form，以组件模板为主，模板中定义好各个表单元素，校验规则，然后angular在运行时解析模板，绑定`NgForm`以及相应的control model。
+  * Reactive Form，以组件类为主，组件类中定义好表单的各个control model，然后angular运行时将代码中的model与模板进行绑定。
 
 ### Reactive Form的构建
 
 * 模板：
   * 表单定义：`<form [formGroup]="heroForm">`，这里的`heroForm`为组件代码中定义好的control model。
-  * 表单元素定义：`<input type="text" id="name" class="form-control" formControlName="name" required >`：
+  * 表单元素定义：`<input type="text" id="name" class="form-control" formControlName="name" required>`：
     * `name`改为`formControlName`，与组件代码中定义好的model进行绑定。
     * 除`required`其他校验规则统统挪到了代码中进行定义。其实`required`代码里也定义了，放这里是为了样式考量。
     * 不再使用`[(ngModel)]`进行双向绑定。
@@ -90,7 +90,7 @@ Form Validation
       this.onValueChanged(); // (re)set validation messages now
     }
   ```
-  * 使用`FormBuilder`构建的表单实例不在属于`NgForm`类型，而是`FormGroup`类型。
+  * 使用`FormBuilder`构建的表单实例不再属于`NgForm`类型，而是`FormGroup`类型。
   * 由于没有了`[(ngModel)]`，那么每次hero数据发生变化时都需要调用`buildForm()`，如最开始的`ngOnInit()`以及后续新建hero时：
   ``` typescript
     addHero() {
@@ -102,6 +102,6 @@ Form Validation
 ### 自定义校验
 
 * 如果应用于Reactive Form，则只需要定义一个函数即可。这个函数需要返回另一个函数：入参是表单的control（用于获取表单元素的值），返回值是一个ValidationError的对象或null。
-* 如果应用与Template Driven Form，则需要定义一个directive：
+* 如果应用于Template Driven Form，则需要定义一个directive：
   * directive的metadata中providers需声明`[{provide: NG_VALIDATORS, useExisting: ForbiddenValidatorDirective, multi: true}]`，其中使用`useExisting`的目的是让其直接使用模板里传入的参数。
   * 需实现接口`Validator`和`ngOnChanges`，前者里的`validate()`函数就是校验逻辑，与上面Reactive Form时定义的函数的返回函数格式一致。后者`ngOnChanges()`用来响应`@Input`值变化进而更新校验逻辑。
