@@ -26,7 +26,7 @@ Attribute Directives
 * 如果directive的选择器名不是一个好的传值变量名，则可以使用`@Input`的别名机制。
 * 一个directive可以定义多个`@Input`的property用来接受多个传值。
 
-### 为什么需要`@Input`
+### 什么时候需要`@Input`
 
 * 当一个property出现在绑定`=`的右侧时，表明这个property属于该template对应的组件，组件和自身的template是互相信任的，这个property也是私有的，此时不需要`@Input`。
 * 当一个property出现在绑定`=`的左侧时，表明这个property不属于该template对应的组件，所以这个property本身必须使用`@Input`来修饰，将其变成public的。

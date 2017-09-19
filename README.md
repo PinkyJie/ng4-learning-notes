@@ -21,3 +21,6 @@
   * [Reactive Forms](./3-4-reactive-forms.md)
   * [Dynamic Forms](./3-5-dynamic-forms.md)
 * [Bootstrapping](./4-bootstrapping.md)
+* NgModules
+  * [NgModules](./5-1-ngmodules.md)
+  * [NgModules FAQs](./5-2-ngmodules-faqs.md)

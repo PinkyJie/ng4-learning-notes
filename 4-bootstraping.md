@@ -1,11 +1,11 @@
-The Root Module
+Bootstrapping
 =======
 
 * 每个Angular应用都必须有一个root module用来bootstrap，这个module的名字可以随便起，一般都叫`AppModule`。
 
 ### imports
 
-* 只有被`@NgModule`decorate过的类才能放进imports属性的数组中。
+* 只有被`@NgModule`修饰过的类才能放进imports属性的数组中。
 * 只要应用需要在浏览器中运行，一般都需要在root module的imports中声明依赖`BrowserModule`，该module来自`@angular/platform-browser`。
 
 ### declarations
@@ -16,7 +16,7 @@ The Root Module
 ### bootstrap
 
 * 整个应用的启动开始于对root module进行bootstrap，该数组中的组件会被创建并插入到DOM中去。
-* bootstrap数组中可以放多个组件，但一般只放一个。
+* bootstrap数组中可以放多个组件，但一般只放一个，一般这个组件命名为`AppComponent`。
 
 ### bootstrap过程
 
